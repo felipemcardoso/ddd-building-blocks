@@ -1,17 +1,14 @@
 package com.github.felipemcardoso.ddd.domain;
 
-import com.github.felipemcardoso.ddd.domain.common.EventType;
-import com.github.felipemcardoso.ddd.domain.common.YesNo;
 import com.fasterxml.jackson.core.JsonProcessingException;
 import com.fasterxml.jackson.databind.ObjectMapper;
+import com.github.felipemcardoso.ddd.domain.common.EventType;
+import com.github.felipemcardoso.ddd.domain.common.YesNo;
 import org.json.JSONObject;
 
 import java.util.Date;
 import java.util.UUID;
 
-/**
- * Created by Felipe on 4/21/15.
- */
 public class Event extends Entity<EventId> {
 
     private Date data;
@@ -50,7 +47,7 @@ public class Event extends Entity<EventId> {
 
         Date data = event.getOccurredOn();
 
-        return new Event(eventId, data, EventType.PUBLICADO, YesNo.NAO, json);
+        return new Event(eventId, data, EventType.PUBLISHED, YesNo.NAO, json);
     }
 
     public static Event create(String json) {
@@ -63,7 +60,7 @@ public class Event extends Entity<EventId> {
 
         EventId eventId = new EventId(UUID.fromString(id));
 
-        return new Event(eventId, data, EventType.CONSUMIDO, YesNo.NAO, json);
+        return new Event(eventId, data, EventType.CONSUMED, YesNo.NAO, json);
     }
 
     public Date getData() {
@@ -91,10 +88,10 @@ public class Event extends Entity<EventId> {
     }
 
     public boolean isPublicado() {
-        return getType() != null && getType().equals(EventType.PUBLICADO);
+        return getType() != null && getType().equals(EventType.PUBLISHED);
     }
 
     public boolean isConsumido() {
-        return getType() != null && getType().equals(EventType.CONSUMIDO);
+        return getType() != null && getType().equals(EventType.CONSUMED);
     }
 }

@@ -3,7 +3,6 @@ package com.github.felipemcardoso.ddd.domain;
 import java.util.Date;
 import java.util.UUID;
 
-
 public abstract class AbstractDomainEvent implements DomainEvent {
 
     private Date occurredOn;

@@ -2,9 +2,6 @@ package com.github.felipemcardoso.ddd.domain;
 
 import java.util.Objects;
 
-/**
- * Created by Felipe on 4/3/15.
- */
 public abstract class CompositeKeyIdentity<T, K extends KeyIdentity<?>> extends KeyIdentity<T> {
 
     private K key2;

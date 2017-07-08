@@ -5,5 +5,5 @@ package com.github.felipemcardoso.ddd.exception;
  * felipe.computacao@gmail.com
  * Description:
  */
-public class BusinessException extends Exception {
+public class BusinessException extends RuntimeException {
 }

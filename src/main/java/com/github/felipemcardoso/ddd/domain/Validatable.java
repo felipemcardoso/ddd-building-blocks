@@ -5,7 +5,7 @@ package com.github.felipemcardoso.ddd.domain;
  * <p>
  * Created by felipe on 7/2/14.
  */
-public interface Validable {
+public interface Validatable {
 
     void validate(ValidationNotificationHandler handler);
 }

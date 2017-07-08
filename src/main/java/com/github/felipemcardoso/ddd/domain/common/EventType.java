@@ -2,7 +2,7 @@ package com.github.felipemcardoso.ddd.domain.common;
 
 public enum EventType {
 
-    PUBLICADO("P"), CONSUMIDO("C");
+    PUBLISHED("P"), CONSUMED("C");
 
     private final String id;
 
