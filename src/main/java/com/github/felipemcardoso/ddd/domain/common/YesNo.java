@@ -12,7 +12,7 @@ public enum YesNo {
 
     private final String id;
 
-    private YesNo(String id) {
+    YesNo(String id) {
         this.id = id;
     }
 

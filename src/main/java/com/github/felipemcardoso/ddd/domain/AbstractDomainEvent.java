@@ -17,17 +17,14 @@ public abstract class AbstractDomainEvent implements DomainEvent {
         this.name = getClass().getName();
     }
 
-    @Override
     public Date getOccurredOn() {
         return this.occurredOn;
     }
 
-    @Override
     public UUID getId() {
         return this.id;
     }
 
-    @Override
     public String getName() {
         return this.name;
     }
